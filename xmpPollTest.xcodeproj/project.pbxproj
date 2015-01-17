@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A323BE511A6AC0350087CE42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A323BE501A6AC0350087CE42 /* main.m */; };
+		A323BE591A6AC0760087CE42 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = A323BE571A6AC0760087CE42 /* TPCircularBuffer.c */; };
+		A323BE5C1A6AC0F30087CE42 /* libxmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BE5B1A6AC0F30087CE42 /* libxmp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		A323BE4D1A6AC0350087CE42 /* xmpPollTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xmpPollTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A323BE501A6AC0350087CE42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A323BE571A6AC0760087CE42 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		A323BE581A6AC0760087CE42 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		A323BE5B1A6AC0F30087CE42 /* libxmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxmp.a; sourceTree = "<group>"; };
+		A323BE5D1A6AC0FA0087CE42 /* xmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A323BE5C1A6AC0F30087CE42 /* libxmp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +65,28 @@
 			isa = PBXGroup;
 			children = (
 				A323BE501A6AC0350087CE42 /* main.m */,
+				A323BE5E1A6AC0FE0087CE42 /* libxmp 4.3.4 */,
+				A323BE5A1A6AC0790087CE42 /* TPCircularBuffer */,
 			);
 			path = xmpPollTest;
+			sourceTree = "<group>";
+		};
+		A323BE5A1A6AC0790087CE42 /* TPCircularBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				A323BE571A6AC0760087CE42 /* TPCircularBuffer.c */,
+				A323BE581A6AC0760087CE42 /* TPCircularBuffer.h */,
+			);
+			name = TPCircularBuffer;
+			sourceTree = "<group>";
+		};
+		A323BE5E1A6AC0FE0087CE42 /* libxmp 4.3.4 */ = {
+			isa = PBXGroup;
+			children = (
+				A323BE5D1A6AC0FA0087CE42 /* xmp.h */,
+				A323BE5B1A6AC0F30087CE42 /* libxmp.a */,
+			);
+			name = "libxmp 4.3.4";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A323BE591A6AC0760087CE42 /* TPCircularBuffer.c in Sources */,
 				A323BE511A6AC0350087CE42 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +230,10 @@
 		A323BE551A6AC0350087CE42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xmpPollTest",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +241,10 @@
 		A323BE561A6AC0350087CE42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xmpPollTest",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
